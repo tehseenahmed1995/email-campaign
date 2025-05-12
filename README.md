@@ -5,8 +5,11 @@
 - PHP 8.3
 - MySQL
 
+#### Postman Collection is available in main directory with name postman collection you can import json file in postman.
+
+
 ### Installation
-#### 1. clone the project and add package to your Laravel project(right now package is accessed using local symlink):
+#### 1. clone the project and add package to your Laravel project(right now package is accessed using local symlink not added on packagist):
         composer require tehseen/email-campaign
 #### 2. Publish assets:
         php artisan vendor:publish --provider="Tehseen\EmailCampaign\Providers\EmailCampaignServiceProvider"
