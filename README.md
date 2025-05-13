@@ -11,12 +11,14 @@
 ### Installation
 #### 1. clone the project and add package to your Laravel project(right now package is accessed using local symlink not added on packagist):
         composer require tehseen/email-campaign
-#### 2. Publish assets:
+#### 2. Database Migration:
+        php artisan migrate
+#### 3. Publish assets:
         php artisan vendor:publish --provider="Tehseen\EmailCampaign\Providers\EmailCampaignServiceProvider"
         php artisan vendor:publish --tag=email-campaign-config
         php artisan vendor:publish --tag=email-campaign-views
 
-#### 3. Set up environment:
+#### 4. Set up environment:
         SENDGRID_API_KEY=
         MAIL_MAILER=smtp
         MAIL_HOST=smtp.sendgrid.net
@@ -24,7 +26,7 @@
         MAIL_USERNAME=apikey
         MAIL_PASSWORD=${SENDGRID_API_KEY}
         MAIL_ENCRYPTION=tls
-#### 4.Start queue worker:
+#### 5.Start queue worker:
         php artisan queue:work --queue=emails
 
 ### Implementation Notes
